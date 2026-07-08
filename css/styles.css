@@ -1,0 +1,114 @@
+/* Custom Medical Theme for The Heart Hospital */
+
+:root {
+  --primary-color: #d41111; /* Heart Red */
+  --secondary-color: #2199e8; /* Medical Blue */
+  --light-gray: #f1f1f1;
+  --dark-gray: #333;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.top-bar {
+  background-color: var(--dark-gray);
+}
+
+.top-bar .menu-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.top-bar .menu a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.top-bar .menu a:hover {
+  color: #fff;
+}
+
+.callout.primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button.primary {
+  background-color: var(--primary-color);
+}
+
+.button.primary:hover {
+  background-color: #a30d0d;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-divider {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background-color: var(--light-gray);
+  color: #666;
+}
+
+/* Assessment Form Styles */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+#risk-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: none;
+}
+
+/* Chat Assistant Styles */
+#chat-container {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+
+.chat-message {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  max-width: 80%;
+}
+
+.chat-message.ai {
+  background-color: var(--light-gray);
+  align-self: flex-start;
+}
+
+.chat-message.user {
+  background-color: var(--secondary-color);
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+}

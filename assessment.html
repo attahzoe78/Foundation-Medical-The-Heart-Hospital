@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risk Assessment | The Heart Hospital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Foundation Medical</li>
+          <li><a href="index.html">The Heart Hospital</a></li>
+          <li><a href="assessment.html">Risk Assessment</a></li>
+          <li><a href="portal.html">Patient Portal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="form-container">
+        <h2 class="text-center">Heart Health Risk Assessment</h2>
+        <p class="text-center">Please provide your clinical parameters for a preliminary risk evaluation.</p>
+        <hr>
+
+        <form id="assessment-form">
+          <div class="grid-x grid-padding-x">
+            <div class="medium-6 cell">
+              <label>Age
+                <input type="number" id="age" placeholder="e.g. 45" required min="1" max="120">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>Sex
+                <select id="sex" required>
+                  <option value="">Select...</option>
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                </select>
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>Resting Blood Pressure (mm Hg)
+                <input type="number" id="trestbps" placeholder="e.g. 120" required min="50" max="250">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>Serum Cholesterol (mg/dl)
+                <input type="number" id="chol" placeholder="e.g. 200" required min="100" max="600">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>Fasting Blood Sugar > 120 mg/dl
+                <select id="fbs">
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>Maximum Heart Rate Achieved
+                <input type="number" id="thalach" placeholder="e.g. 150" required min="60" max="220">
+              </label>
+            </div>
+            <div class="cell">
+              <label>Exercise Induced Angina
+                <select id="exang">
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </label>
+            </div>
+            <div class="cell">
+              <button type="submit" class="button expanded primary">Calculate Risk Score</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="risk-result" class="callout">
+          <h4 id="result-title">Evaluation Result</h4>
+          <p id="result-text"></p>
+          <div id="result-advice" class="label"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <p>&copy; 2026 Foundation Medical. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script src="js/assessment.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
